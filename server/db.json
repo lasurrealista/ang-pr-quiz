@@ -1,0 +1,151 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Ki volt az a magyar grófnő, aki 1828-ban Angyalkert név alatt budai házában létrehozta az első kisdedóvót (óvodát), s aki haláláig 80 óvodát indított útjára?",
+      "answers": ["Veres Pálné", "*Brunszvik Terézia", "Telei Blanka"],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 2,
+      "question": "Ki volt az a világhírű magyar feltalálónő, akit tisztelői a napenergia hasznosítás kapcsán benyújtott több szabadalma miatt „Napkirálynő” néven emlegettek?",
+      "answers": ["Ullmann Ágnes", "*Telkes Mária", "Péter Rózsa"],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 3,
+      "question": "Ki volt az a magyar női szent, aki a legenda szerint a szegényeknek vitt kenyeret rózsává változtatta, nehogy megtiltsák neki a jótékonykodást?",
+      "answers": ["Árpádházi Szent Margit", "*Árpádházi Szent Erzsébet", "Árpádházi Szent Hedvig"],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 4,
+      "question": "Ki volt az a kiváló magyar politikusnő, akit 1920. március 25-én elsőként választottak meg nőként országgyűlési képviselőnek?",
+      "answers": ["*Slachta Margit", "Kéthly Anna", "Ratkó Anna"],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 5,
+      "question": "Ki az a híres magyar sportoló, akit „Egérke” becenéven ismer, szeret minden magyar?",
+      "answers": ["Görbicz Anita", "Polgár Judit", "*Egerszegi Krisztina"],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 6,
+      "question": "Ki volt a rendszerváltást követő első magyar szépségverseny tragikus sorsú, páratlan szépségű nyertese?",
+      "answers": ["Molnár Lilla", "*Molnár Csilla", "Molnár Bella"],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 6,
+      "question": "Ki az a szabadságharcos hősnő, akit 1956 után első fokon halálra ítéltek, majd életfogytiglani börtönbüntetésre változtatták az ítéletet, s aki végül 1970-ben szabadulhatott?",
+      "answers": ["Angyal Józsefné Friedl Valéria", "*Wittner Mária", "Tóth Ilonka"],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 7,
+      "question": "Ki volt az a magyar írónő, aki sok más mellett az Abigél című ifjúsági regényével szerzett népszerűséget?",
+      "answers": ["Szabó Borbála", "*Szabó Magda", "Szabó T. Anna"],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 8,
+      "question": "Ki volt az első magyar orvosnő, akit 1897-ben Budapesten orvosdoktorrá avattak, és aki egész életében szívén viselte a nőképzés ügyét?",
+      "answers": ["Steinberger Sarolta", "*Hugonnai Vilma", "Genersich Margit"],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 9,
+      "question": "Ki volt az a magyar színésznő, sanzonénekes, akit a Gestapo kis híján agyonvert, aki ékszereit odaadva menekített meg egy kivégzésre ítélt gyerekcsapatot a haláltól, s akit aztán a kommunista kultúrpolitika is mellőzött, ami miatt emigrált is?",
+      "answers": ["Honthy Hanna", "*Karády Katalin", "Turay Ida"],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 10,
+      "question": "Ki volt az a magyar zongoraművésznő, aki egy olyan korban tett szert világhírre női muzsikusként, amikor ez még csak keveseknek sikerülhetett?",
+      "answers": ["Prunyi Ilona", "Geyer Stefi", "*Fischer Annie"],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 11,
+      "question": "Ki az a magyar tudósnő, aki az mRNS alapú vakcinák technológiájának szabadalmaztatójaként hozzájárult a koronavírusjárvány elleni oltás fejlesztéséhez?",
+      "answers": ["Ürge-Vorsatz Diána", "Ádám Veronika", "*Karikó Katalin"],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 12,
+      "question": "Ki a XX. század legnagyobb, világhírű magyar operaénekesnője?",
+      "answers": ["Orosz Júlia", "Németh Mária", "*Marton Éva"],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 13,
+      "question": "Ki volt az a Jókai Mór Aranyember című regényében szereplő nőalak, akinek keresztnevét maga a szerző alkotta meg?",
+      "answers": ["*Tímea", "Athalie", "Noémi"],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 14,
+      "question": "Az első magyar régésznő.",
+      "answers": ["Tanner Ilona", "Kossuth Zsuzsanna", "Torma Zsófia"],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 15,
+      "question": "Ő hívta fel a figyelmet a sebesült katonák ápolásának kötelességére, az ápolói hivatás hazai alapjainak lefektetője.",
+      "answers": ["Kozmutza Flóra", "Brunszvik Teréz", "*Kossuth Zsuzsanna"],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 16,
+      "question": "Az első magyar nő, aki pilótavizsgát tett.",
+      "answers": ["*Steinschneider Lilly", "Torma Zsófia", "Török Sophie"],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 17,
+      "question": "Baumgarten-díjas író, költő, Babits Mihály felesége.",
+      "answers": ["Polcz Alaine", "*Tanner Ilona", "Kozmutza Flóra"],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 18,
+      "question": "A magyar nőnevelés egyik úttörője, szobrász, festőművész, író, leánynevelő-intézeti igazgató, pedagógiai szakíró.",
+      "answers": ["*Teleki Blanka", "Torma Zsófia", "Steinschneider Lilly"],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 19,
+      "question": "A tanatológia magyar úttörője, a magyar hospice mozgalom és alapítvány elindítója, Mészöly Miklós felesége.",
+      "answers": ["Dienes Valéria", "Tanner Ilona", "*Polcz Alaine"],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 20,
+      "question": "Az első nő, aki magyarországi egyetemen szerzett diplomát, a magyar Feministák Egyesületének alapítója.",
+      "answers": ["*Glücklich Vilma", "Bédy-Schwimmer Rózsa", "Torma Zsófia"],
+      "points": 1,
+      "active": true
+    }
+  ]
+}
