@@ -1,17 +1,22 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Quiz } from '../model/quiz';
+import { BaseService } from './base.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class QuizService {
+export class QuizService extends BaseService<Quiz> {
 
-  apiUrl: string = 'http://localhost:3000/quizzes';
+  //apiUrl: string = 'http://localhost:3000/quizzes';
+  list$: BehaviorSubject<Quiz[]> = new BehaviorSubject<Quiz[]>([]);
 
-  constructor(private http: HttpClient) { }
+  constructor(public http: HttpClient) {
+    super(http, 'quiz');
+   }
 
+  /*
   getAll(): Observable<Quiz[]> {
     return this.http.get<Quiz[]>(`${this.apiUrl}`);
   }
@@ -31,4 +36,5 @@ export class QuizService {
   update(quiz: Quiz): Observable<Quiz> {
     return this.http.patch<Quiz>(`${this.apiUrl}/${quiz.id}`, quiz);
   }
+  */
 }

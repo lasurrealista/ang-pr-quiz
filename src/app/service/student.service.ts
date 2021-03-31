@@ -1,17 +1,22 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Student } from '../model/student';
+import { BaseService } from './base.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class StudentService {
+export class StudentService extends BaseService<Student> {
 
-  apiUrl: string = 'http://localhost:3000/students';
+  //apiUrl: string = 'http://localhost:3000/students';
+  list$: BehaviorSubject<Student[]> = new BehaviorSubject<Student[]>([]);
 
-  constructor(private http: HttpClient) { }
+  constructor(public http: HttpClient) {
+    super(http, 'student');
+   }
 
+  /*
   getAll(): Observable<Student[]> {
     return this.http.get<Student[]>(`${this.apiUrl}`);
   }
@@ -31,4 +36,5 @@ export class StudentService {
   update(student: Student): Observable<Student> {
     return this.http.patch<Student>(`${this.apiUrl}/${student.id}`, student);
   }
+  */
 }
