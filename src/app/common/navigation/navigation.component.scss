@@ -1,0 +1,9 @@
+@use '../../../assets/modules/colors' as *;
+
+.navbar-brand:hover {
+  color: $secondary-color;
+}
+
+.nav-link:hover {
+  color: $clickme !important;
+}
