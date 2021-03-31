@@ -1,11 +1,20 @@
 {
-  "quizzes": {
-    "id": 1,
-    "title": "Híres magyar nők",
-    "description": "Válassza ki a helyes megoldást!",
-    "questions": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
-    "active": true
-  },
+  "quizzes": [
+    {
+      "id": 1,
+      "title": "Híres magyar nők I.",
+      "description": "Válassza ki a helyes megoldást!",
+      "questions": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "active": true
+    },
+    {
+      "id": 2,
+      "title": "Híres magyar nők II.",
+      "description": "Válassza ki a helyes megoldást!",
+      "questions": [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "active": true
+    }
+  ],
   "questions": [
     {
       "id": 1,
