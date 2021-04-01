@@ -1,3 +1,11 @@
+@use '../../../assets/modules/colors' as *;
+
+body {
+  background-color: rgb(219, 218, 218);
+  height: 100vh;
+  width: 100vw;
+}
+
 thead {
   cursor: pointer;
   user-select: none;
@@ -5,4 +13,27 @@ thead {
   th:last-child {
       cursor: default;
   }
+
+  th:hover {
+    color: $secondary-color;
+  }
 }
+
+.btn {
+  &-search  {
+    background-color: $secondary-color;
+    border: none;
+    color: $primary-color;
+  }
+
+  &-add {
+    background-color: $primary-color;
+    border: none;
+    color: $secondary-color;
+  }
+
+  &-search:hover, &-add:hover {
+    transform: scale(1.05);
+  }
+}
+

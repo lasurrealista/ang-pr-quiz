@@ -1,80 +1,86 @@
-<div class="container-fluid p-4">
+<body>
 
-  <div class="container d-flex justify-content-center">
-    <div class="col-12 col-md-6 mt-4">
-      <select [(ngModel)]="filterKey" class="form-control select-css">
-        <option *ngFor="let key of filterKeys" [value]="key">
-          <span>{{ key }}</span>
-        </option>
-      </select>
-    </div>
-  </div>
+  <div class="container-fluid p-4">
 
-  <div class="col-12">
     <div class="container d-flex justify-content-center">
-      <form class="form-inline my-2 my-lg-0 py-2 d-flex justify-content-center">
-        <input (keyup)="searchEvent($event)" class="search-input form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      <div class="col-12 col-md-6 mt-4">
+        <select [(ngModel)]="filterKey" class="form-control select-css">
+          <option *ngFor="let key of filterKeys" [value]="key">
+            <span>{{ key }}</span>
+          </option>
+        </select>
+      </div>
     </div>
+
+    <div class="col-12">
+      <div class="container d-flex justify-content-center">
+        <form class="form-inline my-2 my-lg-0 py-2 d-flex justify-content-center">
+          <input (keyup)="searchEvent($event)" class="search-input form-control mr-sm-2" type="text"
+            placeholder="Search">
+          <button class="btn btn-success my-2 my-sm-0 btn-search" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="form-group d-flex justify-content-center my-4">
+      <button [routerLink]="['/admin/quiz/0']" class="btn btn-success btn-add">Add new
+        quiz</button>
+    </div>
+
+    <h1 class="text-center h2 mt-4">List of Quizzes</h1>
+    <table class="table table-striped table-dark table-responsive-sm mt-4">
+      <thead>
+        <tr>
+          <th (click)="onColumnSelect('id')">Id
+            <i *ngIf="sortDir === 1" class="fa fa-sort-numeric-asc"></i>
+            <i *ngIf="sortDir === -1" class="fa fa-sort-numeric-desc"></i>
+          </th>
+          <th (click)="onColumnSelect('title')">Title
+            <i *ngIf="sortDir === 1" class="fa fa-sort-alpha-asc"></i>
+            <i *ngIf="sortDir === -1" class="fa fa-sort-alpha-desc"></i>
+          </th>
+          <th (click)="onColumnSelect('description')">Description
+            <i *ngIf="sortDir === 1" class="fa fa-sort-alpha-asc"></i>
+            <i *ngIf="sortDir === -1" class="fa fa-sort-alpha-desc"></i>
+          </th>
+          <th (click)="onColumnSelect('questions')">Questions
+            <i *ngIf="sortDir === 1" class="fa fa-sort-numeric-asc"></i>
+            <i *ngIf="sortDir === -1" class="fa fa-sort-numeric-desc"></i>
+          </th>
+          <th (click)="onColumnSelect('active')">Active
+            <i *ngIf="sortDir === 1" class="fa fa-sort-alpha-asc"></i>
+            <i *ngIf="sortDir === -1" class="fa fa-sort-alpha-desc"></i>
+          </th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let quiz of quizList$ | async| filter:filterKey:phrase:quizzesProperties | sorter:columnKey:sortDir">
+          <td>{{quiz.id}}</td>
+          <td>{{quiz.title}}</td>
+          <td>{{quiz.description}}</td>
+          <td>
+            <ng-container *ngFor="let item of quiz.questions; last as isLast">
+              {{item}}<span *ngIf="!isLast">, </span>
+            </ng-container>
+          </td>
+          <td>
+            <input type="checkbox" id="active" name="active" [(ngModel)]="quiz.active">
+          </td>
+          <td>
+            <div class="btn-group">
+              <button [routerLink]="['quiz/' + quiz.id]" class="btn btn-info">
+                <i class="fa fa-pencil"></i>
+              </button>
+              <button class="btn btn-danger" (click)="onDelete(quiz)">
+                <i class="fa fa-trash"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
-  <div class="form-group d-flex justify-content-center my-4">
-    <button [routerLink]="['/admin/quiz/0']" class="btn btn-success">Add new
-      quiz</button>
-  </div>
-
-  <h1 class="text-center h2 mt-4">List of Quizzes</h1>
-  <table class="table table-striped table-dark table-responsive-sm mt-4">
-    <thead>
-      <tr>
-        <th (click)="onColumnSelect('id')">Id
-          <i *ngIf="sortDir === 1" class="fa fa-sort-numeric-asc"></i>
-          <i *ngIf="sortDir === -1" class="fa fa-sort-numeric-desc"></i>
-        </th>
-        <th (click)="onColumnSelect('title')">Title
-          <i *ngIf="sortDir === 1" class="fa fa-sort-alpha-asc"></i>
-          <i *ngIf="sortDir === -1" class="fa fa-sort-alpha-desc"></i>
-        </th>
-        <th (click)="onColumnSelect('description')">Description
-          <i *ngIf="sortDir === 1" class="fa fa-sort-alpha-asc"></i>
-          <i *ngIf="sortDir === -1" class="fa fa-sort-alpha-desc"></i>
-        </th>
-        <th (click)="onColumnSelect('questions')">Questions
-          <i *ngIf="sortDir === 1" class="fa fa-sort-numeric-asc"></i>
-          <i *ngIf="sortDir === -1" class="fa fa-sort-numeric-desc"></i>
-        </th>
-        <th (click)="onColumnSelect('active')">Active
-          <i *ngIf="sortDir === 1" class="fa fa-sort-alpha-asc"></i>
-          <i *ngIf="sortDir === -1" class="fa fa-sort-alpha-desc"></i>
-        </th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let quiz of quizList$ | async| filter:filterKey:phrase:quizzesProperties | sorter:columnKey:sortDir">
-        <td>{{quiz.id}}</td>
-        <td>{{quiz.title}}</td>
-        <td>{{quiz.description}}</td>
-        <td>
-          <ng-container *ngFor="let item of quiz.questions; last as isLast">
-            {{item}}<span *ngIf="!isLast">, </span>
-          </ng-container>
-        </td>
-        <td>
-          <input type="checkbox" id="active" name="active" [(ngModel)]="quiz.active">
-        </td>
-        <td>
-          <div class="btn-group">
-            <button [routerLink]="['quiz/' + quiz.id]" class="btn btn-info">
-              <i class="fa fa-pencil"></i>
-            </button>
-            <button class="btn btn-danger" (click)="onDelete(quiz)">
-              <i class="fa fa-trash"></i>
-            </button>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+</body>
