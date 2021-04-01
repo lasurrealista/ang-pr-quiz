@@ -49,4 +49,12 @@ export class AdminComponent implements OnInit {
     count: 0,
   };
 
+  columnKey: string = '';
+  sortDir: number = -1;
+
+  onColumnSelect(key: string): void {
+    this.columnKey = key;
+    this.sortDir = this.sortDir * (-1);
+  }
+
 }
