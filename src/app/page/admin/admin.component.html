@@ -29,7 +29,7 @@
             <button [routerLink]="['quiz/' + quiz.id]" class="btn btn-info">
               <i class="fa fa-pencil"></i>
             </button>
-            <button class="btn btn-danger">
+            <button class="btn btn-danger" (click)="onDelete(quiz)">
               <i class="fa fa-trash"></i>
             </button>
           </div>

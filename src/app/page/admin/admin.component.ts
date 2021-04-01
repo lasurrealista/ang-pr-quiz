@@ -20,4 +20,20 @@ export class AdminComponent implements OnInit {
   ngOnInit(): void {
     this.quizService.getAll();
   }
+
+  onDelete(quiz: Quiz): void {
+    this.quizService.remove(quiz).subscribe(
+      () => this.quizService.getAll()
+    )
+  }
+
+  onUpdate(quiz: Quiz): void {
+
+    if (quiz.id === 0) {
+      this.quizService.create(quiz);
+    }
+
+    this.quizService.update(quiz);
+  }
+
 }
