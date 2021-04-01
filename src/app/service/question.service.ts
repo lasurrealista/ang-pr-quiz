@@ -13,7 +13,7 @@ export class QuestionService extends BaseService<Question> {
   list$: BehaviorSubject<Question[]> = new BehaviorSubject<Question[]>([]);
 
   constructor(public http: HttpClient) {
-    super(http, 'question');
+    super(http, 'questions');
   }
 
   /*

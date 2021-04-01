@@ -1,1 +1,29 @@
-<p>quiz works!</p>
+<body>
+  <div class="row d-flex justify-content-center">
+    <ng-container *ngFor="let question of questionList$ | async">
+      <div class="column col-md-6 col-lg-4">
+        <div class="card text-white">
+          <div class="card-body">
+            <h5 class="card-title text-center">{{ question.question }}</h5>
+
+            <div class="form-group ml-5 pl-3">
+              <input type="radio" class="form-check-input">
+              <label class="form-check-label">{{ question.answers[0].content }}</label>
+            </div>
+            <div class="form-group ml-5 pl-3">
+              <input type="radio" class="form-check-input">
+              <label class="form-check-label">{{ question.answers[1].content }}</label>
+            </div>
+            <div class="form-group ml-5 pl-3">
+              <input type="radio" class="form-check-input">
+              <label class="form-check-label">{{ question.answers[2].content }}</label>
+            </div>
+
+            <p class="card-text text-center">Ez a kérdés {{question.points}} pontot ér.</p>
+
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</body>

@@ -1,0 +1,32 @@
+@use '../../../assets/modules/colors' as *;
+
+body {
+  background-color: $background-color;
+  height: 100%;
+  width: 100vw;
+}
+
+.card {
+  background-color: $primary-color;
+
+  &-title {
+    color: $secondary-color;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.btn {
+  background-color: $background-color;
+
+  &:hover {
+    background-color: $clickme;
+    transform: scale(1.05);
+  }
+}
+
+.column {
+  margin: 1rem 1rem 0 1rem;
+}
