@@ -36,4 +36,17 @@ export class AdminComponent implements OnInit {
     this.quizService.update(quiz);
   }
 
+  filterKey: string = '';
+  filterKeys: string[] = Object.keys(new Quiz());
+
+  phrase: string = '';
+
+  searchEvent(event: Event): void {
+    this.phrase = (event.target as HTMLInputElement).value;
+  }
+
+  quizzesProperties: {count: number} = {
+    count: 0,
+  };
+
 }
