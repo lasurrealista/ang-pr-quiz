@@ -1,6 +1,7 @@
 <body>
   <div class="row d-flex justify-content-center">
-    <ng-container *ngFor="let question of questionList$ | async">
+    <div *ngIf="quiz$ | async as quiz"></div>
+    <ng-container *ngFor="let question of questionList">
       <div class="column col-md-6 col-lg-4">
         <div class="card text-white">
           <div class="card-body">
